@@ -130,7 +130,7 @@ def count_negatives(seq):
 def run_test_count_short_ones():
     """ Tests the   count_short_ones   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  count_short_ones  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -332,7 +332,7 @@ def draw_circles(window, points, radius, color):
       :type color: str
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
