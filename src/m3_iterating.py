@@ -5,8 +5,8 @@ in its most classic form:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Morgan Brown.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -21,7 +21,7 @@ def main():
 def run_test_count_negatives():
     """ Tests the   count_negatives   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  count_negatives  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -83,9 +83,22 @@ def run_test_count_negatives():
     print('       actual:  ', actual)
 
     # -------------------------------------------------------------------------
-    # TODO 2 (continued):  Add your 2 ADDITIONAL tests here:
+    # DONE 2 (continued):  Add your 2 ADDITIONAL tests here:
     # -------------------------------------------------------------------------
 
+    # Test 6:
+    expected = 3
+    actual = count_negatives([0, -2, 4, -6, 8, -10])
+    print()
+    print('Test 6 expected', expected)
+    print('       actual: ', actual)
+
+    # Test 7:
+    expected = 4
+    actual = count_negatives([-1, -2, 200, -6, 8, -4])
+    print()
+    print('Test 7 expected', expected)
+    print('       actual: ', actual)
 
 def count_negatives(seq):
     """
@@ -103,9 +116,15 @@ def count_negatives(seq):
       :type seq: (list | tuple) of (int | float)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
+    count = 0
+    for k in range(len(seq)):
+        if seq[k] < 0:
+            count = count + 1
+    return count
+
 
 
 def run_test_count_short_ones():
@@ -213,6 +232,12 @@ def count_short_ones(seq_of_lists):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
+    count = 0
+    for numbers in seq_of_lists:
+        if len(numbers) < 3:
+            count = count + 1
+    return count
+
 
 
 def run_test_draw_circles():
